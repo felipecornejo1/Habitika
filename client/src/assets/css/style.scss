@@ -7,6 +7,18 @@
     scroll-behavior: smooth;
 }
 
+// Abstracts
 @import './colors/colors.scss';
 @import './fonts/fonts.scss';
 @import './others/others.scss';
+
+// Containers
+@import '../../containers/Header/header.scss';
+@import '../../containers/Navbar/navbar.scss';
+
+//Components
+@import '../../components/Dashboard/dashboard.scss';
+
+// Pages
+@import '../../pages/Home/home.scss';
+@import '../../pages/Profile/profile.scss';

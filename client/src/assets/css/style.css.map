@@ -1,8 +1,15 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,CAAC;AACD,OAAO;AACP,QAAQ,CAAC;EACL,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;EACtB,eAAe,EAAE,MAAM;CAC1B;;AIPD,AAAA,MAAM,CAAC;EDCH,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,cAAc,ECHM,GAAG;EACvB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;EACX,UAAU,EHCA,OAAO;EGAjB,SAAS,EAAE,IAAI;CAUlB;;AAfD,AAOI,MAPE,CAOF,aAAa,CAAC;EACV,KAAK,EAAE,IAAI;CACd;;AATL,AAUI,MAVE,CAUF,GAAG,CAAC;EACA,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,KAAK,EAAE,IAAI;CACd",
     "sources": [
-        "style.scss"
+        "style.scss",
+        "colors/colors.scss",
+        "fonts/fonts.scss",
+        "others/others.scss",
+        "../../containers/Header/header.scss",
+        "../../containers/Navbar/navbar.scss",
+        "../../pages/Home/home.scss",
+        "../../pages/Profile/profile.scss"
     ],
     "names": [],
     "file": "style.css"
