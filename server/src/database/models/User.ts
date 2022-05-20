@@ -1,5 +1,6 @@
 // Imports
-import { Table, Model, Column, DataType } from 'sequelize-typescript'
+import { Table, Model, Column, DataType, HasMany } from 'sequelize-typescript'
+import { Post, Comment, Follow, Habit, Like, Task } from './index'
 
 // Table Settings
 @Table({
@@ -37,10 +38,36 @@ export class User extends Model {
   })
   profile_picture!: string
 
-  // User Type
+  // First Name
   @Column({
-    type: DataType.INTEGER,
+    type: DataType.STRING,
     allowNull: false
   })
-  type!: number
+  first_name!: string
+
+  // Last Name
+  @Column({
+    type: DataType.STRING,
+    allowNull: false
+  })
+  last_name!: string
+
+  // Associations
+  @HasMany(() => Post)
+  posts!: Post[]
+
+  @HasMany(() => Comment)
+  comments!: Comment[]
+
+  @HasMany(() => Follow)
+  follows!: Follow[]
+
+  @HasMany(() => Habit)
+  habits!: Habit[]
+
+  @HasMany(() => Like)
+  likes!: Like[]
+
+  @HasMany(() => Task)
+  tasks!: Task[]
 }

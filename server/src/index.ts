@@ -4,6 +4,7 @@ import path from 'path'
 import cors from 'cors'
 import { json, urlencoded } from 'body-parser'
 import methodOverride from 'method-override'
+import connection from './database/config/config'
 
 // Routes Imports
 import mainRoutes from './routes/mainRoutes'
@@ -32,4 +33,12 @@ app.use(cors())
 // Put & Delete Requests
 app.use(methodOverride('_method'))
 
+// Routes
 app.use('/', mainRoutes)
+
+// Connect to Database
+connection.sync().then(() => {
+  console.log('Database synced successfully')
+}).catch((err: any) => {
+  console.log('Err', err)
+})

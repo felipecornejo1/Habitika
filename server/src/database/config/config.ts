@@ -1,13 +1,13 @@
 // Imports
 import { Sequelize } from 'sequelize-typescript'
-import { User } from '../models/User'
+import { User, Post, Comment, Follow, Habit, Like, Task } from '../models/index'
 
-// Database Settings -> Parameters: (database, username, password, {options})
-const connection = new Sequelize('database', 'username', 'password', {
+// Database Settings -> Parameters: (database, , Post, Comment, Follow, Habit, Like, Taskname, password, {options})
+const connection = new Sequelize('habitika_main', 'habitika', 'Habitika1928#', {
   dialect: 'mysql',
-  host: 'localhost',
+  host: 'mysql-habitika.alwaysdata.net',
   logging: false,
-  models: [User]
+  models: [User, Post, Comment, Follow, Habit, Like, Task]
 })
 
 export default connection

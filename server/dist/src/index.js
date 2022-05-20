@@ -6,10 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // Library Imports
 const express_1 = __importDefault(require("express"));
 const path_1 = __importDefault(require("path"));
-// import sequelize from 'sequelize';
 const cors_1 = __importDefault(require("cors"));
-// import bodyParser from 'body-parser';
+const body_parser_1 = require("body-parser");
 const method_override_1 = __importDefault(require("method-override"));
+const config_1 = __importDefault(require("./database/config/config"));
 // Routes Imports
 const mainRoutes_1 = __importDefault(require("./routes/mainRoutes"));
 // Setting variables
@@ -20,6 +20,9 @@ app.listen(process.env.PORT ?? PORT, () => {
     console.log('--------Habitika API--------');
     console.log(`Server running on port ${PORT}`);
 });
+// Body Parser
+app.use((0, body_parser_1.json)());
+app.use((0, body_parser_1.urlencoded)({ extended: true }));
 // Carpeta Public
 const publicPath = path_1.default.join(__dirname, './public');
 app.use(express_1.default.static(publicPath));
@@ -27,4 +30,11 @@ app.use(express_1.default.static(publicPath));
 app.use((0, cors_1.default)());
 // Put & Delete Requests
 app.use((0, method_override_1.default)('_method'));
+// Routes
 app.use('/', mainRoutes_1.default);
+// Connect to Database
+config_1.default.sync().then(() => {
+    console.log('Database synced successfully');
+}).catch((err) => {
+    console.log('Err', err);
+});

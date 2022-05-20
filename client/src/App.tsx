@@ -10,8 +10,8 @@ const App = () => {
         <div>
             < Header />
             <Routes>
-                <Route exact path="/" element={< Home />} />
-                <Route exact path="/profile" element={< Profile />} />
+                <Route path="/" element={< Home />} />
+                <Route path="/profile" element={< Profile />} />
             </Routes>
             < Navbar />
         </div>
