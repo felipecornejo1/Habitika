@@ -12,9 +12,14 @@
 @import './fonts/fonts.scss';
 @import './others/others.scss';
 
-// Containers
-@import '../../containers/Header/header.scss';
-@import '../../containers/Navbar/navbar.scss';
+// Sections
+@import '../../section/Header/header.scss';
+@import '../../section/Navbar/navbar.scss';
+@import '../../section/ProfileHeader/ProfileHeader.scss';
+@import '../../section/ProfileActivity/ProfileActivity.css';
+@import '../../section/LoginHeader/LoginHeader.scss';
+@import '../../section/LoginForm/LoginForm.scss';
+
 
 //Components
 @import '../../components/Dashboard/dashboard.scss';
@@ -22,3 +27,4 @@
 // Pages
 @import '../../pages/Home/home.scss';
 @import '../../pages/Profile/profile.scss';
+@import '../../pages/Login/login.scss';

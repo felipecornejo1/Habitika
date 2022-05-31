@@ -1,3 +1,5 @@
+@import url(/Users/tobiasgarreton/Documents/Code/Habitika/client/src/section/ProfileActivity/ProfileActivity.css);
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
 *,
 ::after,
 ::before {
@@ -36,5 +38,72 @@ header svg {
   position: absolute;
   right: 20px;
   color: #fff;
+}
+
+.flexbox-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3em;
+}
+
+.profilePicture img {
+  border: 0.5px solid grey;
+  border-radius: 4em;
+  width: 5em;
+}
+
+.name {
+  margin-left: 1em;
+}
+
+.flexbox-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-btn {
+  border: 1px solid #40916c !important;
+  color: #40916c !important;
+  margin: 0.5em !important;
+}
+
+.flexbox-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title {
+  font-family: 'Leckerli One', cursive;
+  color: #333232;
+}
+
+#login-btn {
+  background: #40916c;
+  color: white !important;
+}
+
+.pene {
+  margin: 10;
 }
 /*# sourceMappingURL=style.css.map */

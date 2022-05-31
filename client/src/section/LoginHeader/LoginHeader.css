@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+.flexbox-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title {
+  font-family: 'Leckerli One', cursive;
+  color: #333232;
+}
+/*# sourceMappingURL=LoginHeader.css.map */
