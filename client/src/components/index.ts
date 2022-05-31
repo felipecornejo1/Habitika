@@ -1,1 +1,2 @@
-export {default as Dashboard} from './Dashboard/dashboard';
+const a = 'a'
+export default a

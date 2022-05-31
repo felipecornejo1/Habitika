@@ -7,7 +7,16 @@ import methodOverride from 'method-override'
 import connection from './database/config/config'
 
 // Routes Imports
-import mainRoutes from './routes/mainRoutes'
+import {
+  mainRoutes,
+  commentRoutes,
+  followRoutes,
+  habitRoutes,
+  likeRoutes,
+  postRoutes,
+  taskRoutes,
+  userRoutes
+} from './routes/index'
 
 // Setting variables
 const app = express()
@@ -35,6 +44,13 @@ app.use(methodOverride('_method'))
 
 // Routes
 app.use('/', mainRoutes)
+app.use('/api/comments', commentRoutes)
+app.use('/api/follows', followRoutes)
+app.use('/api/habits', habitRoutes)
+app.use('/api/likes', likeRoutes)
+app.use('/api/posts', postRoutes)
+app.use('/api/tasks', taskRoutes)
+app.use('/api/users', userRoutes)
 
 // Connect to Database
 connection.sync().then(() => {

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Dashboard } from '../../components/index';
+import { HomeDashboard } from '../../containers/index';
 
 const Home = () => {
     return(
         <div>
-            < Dashboard />
+            < HomeDashboard />
         </div>
     )
 }

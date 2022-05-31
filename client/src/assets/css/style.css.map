@@ -11,6 +11,8 @@
         "../../section/ProfileHeader/ProfileHeader.scss",
         "../../section/LoginHeader/LoginHeader.scss",
         "../../section/LoginForm/LoginForm.scss",
+        "../../containers/Header/header.scss",
+        "../../containers/Navbar/navbar.scss",
         "../../components/Dashboard/dashboard.scss",
         "../../pages/Home/home.scss",
         "../../pages/Profile/profile.scss",
