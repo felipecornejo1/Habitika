@@ -1,8 +1,0 @@
-export { default as commentRoutes } from './commentRoutes'
-export { default as followRoutes } from './followRoutes'
-export { default as habitRoutes } from './habitRoutes'
-export { default as likeRoutes } from './likeRoutes'
-export { default as mainRoutes } from './mainRoutes'
-export { default as postRoutes } from './postRoutes'
-export { default as taskRoutes } from './taskRoutes'
-export { default as userRoutes } from './userRoutes'

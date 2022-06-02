@@ -1,0 +1,30 @@
+@import 'colors';
+
+.flexboxContainer {
+  display: flex;
+  justify-content: center; //cross AXIS => Vertical
+  align-items: center; //main AXIS => Horizontal
+  margin-top: 3em;
+}
+
+.profilePicture img {
+  border: 0.5px solid grey;
+  border-radius: 4em;
+  width: 5em;
+}
+
+.name {
+  margin-left: 1em;
+}
+
+.flexboxItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileBtn {
+  border: 1px solid $green !important;
+  color: $green !important;
+  margin: 0.5em !important;
+}
