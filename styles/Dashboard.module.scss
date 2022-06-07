@@ -1,0 +1,51 @@
+@import 'mixins';
+@import 'colors';
+
+.dashboard {
+  @include flexCenter(column);
+  margin-top: 20px;
+  .dashboard__tabs {
+    @include bigShadow();
+    background-color: $lightgreybg;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: none;
+    .dashboard__tabs__tab {
+      @include flexCenter(row);
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      &.active {
+        background-color: $lightgreen;
+        color: #fff;
+        &.dashboard__tabs__habits {
+          border-top-left-radius: 1rem;
+          border-bottom-left-radius: 1rem;
+        }
+        &.dashboard__tabs__tasks {
+          border-top-right-radius: 1rem;
+          border-bottom-right-radius: 1rem;
+        }
+      }
+    }
+  }
+  .dashboard__habits {
+    background-color: $lightgreybg;
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    .dashboard__habits__habit {
+      @include flexCenter(row);
+      @include smallShadow();
+      background-color: #fff;
+      border-radius: 0.5rem;
+      padding: 5px;
+      margin: 10px 0;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}

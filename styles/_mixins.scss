@@ -4,3 +4,13 @@
   justify-content: center;
   flex-direction: $direction;
 }
+
+// Shadow for small components
+@mixin smallShadow {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.156);
+}
+
+// Shadow for big components
+@mixin bigShadow {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.156);
+}

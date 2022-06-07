@@ -1,0 +1,42 @@
+@import 'colors';
+
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Nunito Sans !important;
+  font-weight: 600;
+}
+
+body {
+  padding-top: 70px;
+  background-color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Material UI Customizations
+.MuiBottomNavigation-root {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: $lightgreen;
+}
+.MuiBottomNavigationAction-root {
+  color: rgba(255, 255, 255, 0.9);
+  svg {
+    transition: 200ms;
+    font-size: 2rem;
+  }
+  &.Mui-selected {
+    color: #fff;
+    svg {
+      font-size: 2.5rem;
+    }
+  }
+}
