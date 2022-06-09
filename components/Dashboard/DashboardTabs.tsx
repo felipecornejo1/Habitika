@@ -1,22 +1,22 @@
-import { useState } from 'react'
 import styles from '../../styles/Dashboard.module.scss'
 
 // Material UI
 import TaskAltIcon from '@mui/icons-material/TaskAlt'
 import PersonIcon from '@mui/icons-material/Person'
-
-type dashboardTabType = 'habits' | 'tasks'
+import { useDashboardTabs } from '../../hooks/useDashboardTabs'
 
 const DashboardTabs = () => {
-  const [dashboardTab, setDashboardTab] = useState<dashboardTabType>('habits')
-
+  const { dashboardTabState, openTab } = useDashboardTabs()
+  const tab = dashboardTabState.tab
   return (
     <div className={styles.dashboard__tabs}>
       <div
         className={`${styles.dashboard__tabs__tab} ${
           styles.dashboard__tabs__habits
-        } ${dashboardTab == 'habits' && styles.active}`}
-        onClick={() => setDashboardTab('habits')}
+        } ${tab == 'habits' && styles.active}`}
+        onClick={() => {
+          openTab('habits')
+        }}
       >
         <PersonIcon style={{ fontSize: 'inherit', margin: '5px' }} />
         <p>Habits</p>
@@ -24,8 +24,10 @@ const DashboardTabs = () => {
       <div
         className={`${styles.dashboard__tabs__tab} ${
           styles.dashboard__tabs__tasks
-        } ${dashboardTab == 'tasks' && styles.active}`}
-        onClick={() => setDashboardTab('tasks')}
+        } ${tab == 'tasks' && styles.active}`}
+        onClick={() => {
+          openTab('tasks')
+        }}
       >
         <TaskAltIcon style={{ fontSize: 'inherit', margin: '5px' }} />
         <p>Tasks</p>
