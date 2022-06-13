@@ -4,7 +4,7 @@ import { DashboardTabContext } from './DashboardTabContext'
 import { DashboardTabReducer } from './DashboardTabReducer'
 
 const INITIAL_STATE: IDashboardTabState = {
-  tab: 'tasks',
+  tab: 'habits',
 }
 
 interface props {

@@ -48,4 +48,26 @@
       justify-content: space-between;
     }
   }
+  .dashboard__posts {
+    h5 {
+      font-weight: 600;
+      text-align: center;
+    }
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    .dashboard__posts__item {
+      .dashboard__posts__item__msg {
+        color: $greyfont;
+        font-size: 0.9rem;
+      }
+      .dashboard__postActions {
+        @include flexCenter(row);
+        justify-content: space-evenly;
+        margin-top: 0.8rem;
+        font-size: 1.2rem;
+        color: $greyfont;
+      }
+    }
+  }
 }

@@ -13,7 +13,7 @@ const DashboardTabs = () => {
       <div
         className={`${styles.dashboard__tabs__tab} ${
           styles.dashboard__tabs__habits
-        } ${tab == 'habits' && styles.active}`}
+        } ${tab === 'habits' && styles.active}`}
         onClick={() => {
           openTab('habits')
         }}
@@ -24,7 +24,7 @@ const DashboardTabs = () => {
       <div
         className={`${styles.dashboard__tabs__tab} ${
           styles.dashboard__tabs__tasks
-        } ${tab == 'tasks' && styles.active}`}
+        } ${tab === 'tasks' && styles.active}`}
         onClick={() => {
           openTab('tasks')
         }}
